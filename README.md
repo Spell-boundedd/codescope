@@ -2,11 +2,9 @@
 
 CodeScope is a Python CLI tool that analyzes software projects and generates useful developer metrics.
 
-## Screenshots
+## Demo
 
-![CodeScope Demo](assets/1f.png)
-![CodeScope Demo](assets/2f.png)
-![CodeScope Demo](assets/3f.png)
+![CodeScope Demo](assets/demo.png)
 
 
 ## Features
