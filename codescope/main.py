@@ -1,27 +1,22 @@
+from importlib.resources import path
+
 import typer
 from rich import print
-from analyzer import analyze_project
+from codescope.analyzer import analyze_project
 
 app = typer.Typer()
 
-def analyze(path: str = "."):
-    """
-    Analyze a project folder.
-    """
 
-    print(f"[bold blue]Analyzing:[/bold blue] {path}")
+@app.command()
+def analyze(path: str = ".", export: str = None):
+    print(f"[bold blue]Analyzing folder:[/bold blue] {path}")
+    analyze_project(path, export)
 
-    analyze_project(path)
 
+@app.command()
 def version():
-    """
-    Show application version.
-    """
-
     print("[bold green]CodeScope v1.0[/bold green]")
 
-app.command()(analyze)
-app.command()(version)
 
 if __name__ == "__main__":
     app()

@@ -1,0 +1,13 @@
+[project]
+name = "codescope"
+version = "0.1.0"
+description = "A Python CLI tool for analyzing software projects"
+
+dependencies = [
+"typer",
+"rich",
+"pytest"
+]
+
+[project.scripts]
+codescope = "codescope.main:app"
